@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký thành viên CLB</title>
+
+    <link rel="stylesheet" href="../css/style3.css">
+
+</head>
+
+<body>
+
+    <form>
+
+        <fieldset>
+
+            <legend>Đăng ký thành viên CLB</legend>
+
+            <label>Họ tên</label>
+            <input type="text" name="hoten" required>
+
+            <label>MSSV</lable>
+                <input type="text" name="mssv" required>
+
+            <label>Mã lớp</label>
+            <select name="malop">
+                <option>DA24TTA</option>
+                <option>DA24TTB</option>
+                <option>DA24TTC</option>
+                <option>DA24TTD</option>
+            </select>
+
+            <label>Giới tính</label>
+            <div class="inline">
+                <input type="radio" name="gioitinh">Nam
+                <input type="radio" name="gioitinh">Nữ
+                  </div>
+
+                  <label>Điểm mạnh</label>
+                  <div class="inline">
+                    <input type="checkbox"> Lập trình
+                    <input type="checkbox"> Thiết kế
+                    <input type="checkbox"> Thuyết trình
+                    <br>
+                     <input type="checkbox"> Làm việc nhóm
+                    <input type="checkbox"> Sáng tạo 
+                    <input type="checkbox"> Quản lý
+                  </div>
+
+                  <label>Nội dung giới thiệu</label>
+                  <textarea rows="4" placeholder="Nhập nội dung..."></textarea>
+
+                  <button type="submit">Đăng ký</button>
+                  <button type="reset">Nhập lại</button>
+
+        </fieldset>
+
+    </form>
+
+</body>
+</html>

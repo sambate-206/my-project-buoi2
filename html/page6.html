@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính học phí</title>
+    <link rel="stylesheet" href="../css/style6.css"
+</head>
+<body>
+
+<h2>Tính học phí</h2>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <td>Số tín chỉ</td>
+        <td><input type="number" id="tinchi"></td>
+    </tr>
+    <tr>
+        <td>Tiền 1 tín chỉ</td>
+        <td><input type="number" id="dongia"></td>
+    </tr>
+    <tr>
+        <td>Giảm giá (%)</td>
+        <td><input type="number" id="giamgia"></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <button onclick="tinhTien()">Tính tiền</button>
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <td>Kết quả</td>
+        <td id="ketqua"></td>
+    </tr>
+</table>
+
+<script>
+function tinhTien() {
+    var tinchi = document.getElementById("tinchi").value;
+    var dongia = document.getElementById("dongia").value;
+    var giamgia = document.getElementById("giamgia").value;
+
+    var tong = tinchi * dongia;
+    var giam = tong * (giamgia / 100);
+    var thanhtien = tong - giam;
+
+    document.getElementById("ketqua").innerHTML =
+        "Tổng: " + tong + " VND <br>" +
+        "Giảm: " + giam + " VND <br>" +
+        "Phải đóng: " + thanhtien + " VND";
+}
+</script>
+
+</body>
+</html>
