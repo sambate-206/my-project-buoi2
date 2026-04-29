@@ -1,0 +1,56 @@
++<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng sản phẩm</title>
+    <link rel="stylesheet" href="../css/style7.css">
+</head>
+<body>
+
+    <div id="product-list"></div>
+
+    <script>
+        function addProduct(imgSrc, imgAlt, name, price, status, detail) {
+            const container = document.getElementById("product-list");
+
+            const myDiv = document.createElement("div");
+            myDiv.setAttribute("class", "product.item");
+
+            const myDiv1 = document.createElement("div");
+            myDiv1.setAttribute("class", "product.image");
+
+            const productImg = document.createElement("img");
+            productImg.setAttribute("src", imgSrc);
+            productImg.setAttribute("alt", imgAlt);
+
+            const myDiv2 = document.createElement("div");
+            myDiv2.setAttribute("class", "product.info");
+            
+            myDiv2.innerHTML = `
+                <h3>${name}</h3>
+                <p>Giá: ${price}</p>
+                <p>Tình trạng: ${status}</p>
+                <p>Chi tiết sản phẩm: ${detail}</p>
+            `;
+
+            myDiv1.appendChild(productImg);
+            myDiv.appendChild(myDiv1);
+            myDiv.appendChild(myDiv2);
+
+            if (container) {
+                container.appendChild(myDiv);
+            }
+        }
+
+        
+        addProduct(
+            "../assets/images/shin-chan.jpg",
+            "Shin",
+            "Shin Cậu Bé Bút Chì",
+            "250.000đ",
+            "Còn hàng",
+            "Gấu Bông Shin trái tim"
+        );
+    </script>
+</body>
+</html>
